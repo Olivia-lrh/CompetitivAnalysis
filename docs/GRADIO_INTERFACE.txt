@@ -1,0 +1,199 @@
+# Gradio Interface Visual Guide / Gradio界面可视化指南
+
+## 界面布局 / Interface Layout
+
+```
+╔══════════════════════════════════════════════════════════════════════╗
+║                                                                      ║
+║  🔍 竞品分析工具 / Competitive Analysis Tool                          ║
+║                                                                      ║
+║  使用多智能体系统进行全面的竞品分析                                     ║
+║  Comprehensive competitive analysis using multi-agent system         ║
+║                                                                      ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────┬─────────────────────────────────────┐
+│                                 │                                     │
+│  📝 输入信息 / Input Information │  📊 分析结果 / Analysis Results      │
+│  ───────────────────────────── │  ─────────────────────────────────  │
+│                                 │                                     │
+│  🏢 行业 / Industry *           │  状态 / Status                       │
+│  ┌─────────────────────────┐   │  ┌─────────────────────────────┐   │
+│  │ 电子商务平台               │   │  │ ✅ 分析成功完成!              │   │
+│  └─────────────────────────┘   │  └─────────────────────────────┘   │
+│  必填 / Required                │                                     │
+│                                 │  摘要 / Summary                      │
+│  📦 产品名称 / Product Name *   │  ┌─────────────────────────────┐   │
+│  ┌─────────────────────────┐   │  │ ### 分析摘要                  │   │
+│  │ ShopEasy                 │   │  │ 状态: completed              │   │
+│  └─────────────────────────┘   │  │ 完成步骤: 8/8                 │   │
+│  必填 / Required                │  │ 报告质量分数: 0.85            │   │
+│                                 │  │                              │   │
+│  🎯 产品用途 / Product Purpose  │  │ **收集的信息:**               │   │
+│  ┌─────────────────────────┐   │  │ - 行业: 电子商务平台           │   │
+│  │ 为中小企业提供在线商店     │   │  │ - 产品名称: ShopEasy         │   │
+│  │ 解决方案的SaaS平台         │   │  │ - 产品用途: SaaS平台...      │   │
+│  │                          │   │  └─────────────────────────────┘   │
+│  └─────────────────────────┘   │                                     │
+│                                 │  📈 报告质量分数 / Quality Score     │
+│  👥 目标受众 / Target Audience  │  ┌─────────────────────────────┐   │
+│  ┌─────────────────────────┐   │  │ 0.85                         │   │
+│  │ 中小型企业主和创业者       │   │  └─────────────────────────────┘   │
+│  └─────────────────────────┘   │                                     │
+│                                 │                                     │
+│  💰 价格范围 / Price Range      │                                     │
+│  ┌─────────────────────────┐   │                                     │
+│  │ 每月99-499元              │   │                                     │
+│  └─────────────────────────┘   │                                     │
+│                                 │                                     │
+│  🌟 企业文化 / Company Culture  │                                     │
+│  ┌─────────────────────────┐   │                                     │
+│  │ 注重客户成功和创新         │   │                                     │
+│  │                          │   │                                     │
+│  └─────────────────────────┘   │                                     │
+│                                 │                                     │
+│  📋 用户需求 / User Needs       │                                     │
+│  ┌─────────────────────────┐   │                                     │
+│  │ 了解市场竞争情况并找到     │   │                                     │
+│  │ 差异化定位                 │   │                                     │
+│  └─────────────────────────┘   │                                     │
+│                                 │                                     │
+│  ┌──────────┐  ┌──────────┐    │                                     │
+│  │🚀 开始分析│  │🔄 清除    │    │                                     │
+│  │Start     │  │Clear     │    │                                     │
+│  └──────────┘  └──────────┘    │                                     │
+│                                 │                                     │
+└─────────────────────────────────┴─────────────────────────────────────┘
+
+────────────────────────────────────────────────────────────────────────
+
+📄 最终报告 / Final Report
+
+┌────────────────────────────────────────────────────────────────────┐
+│                                                                    │
+│  # Competitive Analysis Report                                    │
+│                                                                    │
+│  **Report Type:** competitive_analysis                            │
+│  **Generated:** 2024-02-09 01:00:00                              │
+│                                                                    │
+│  ## Executive Summary                                             │
+│                                                                    │
+│  This competitive analysis report examines ShopEasy's position    │
+│  in 电子商务平台.                                                   │
+│                                                                    │
+│  Key Findings:                                                    │
+│  - 3 major strengths identified                                   │
+│  - 3 strategic opportunities discovered                           │
+│  - 3 competitive threats to monitor                               │
+│  - 4 strategic recommendations provided                           │
+│                                                                    │
+│  ## Company Profile                                               │
+│                                                                    │
+│  **Product Name:** ShopEasy                                       │
+│  **Industry:** 电子商务平台                                         │
+│  **Product Purpose:** 为中小企业提供在线商店解决方案的SaaS平台        │
+│  **Target Audience:** 中小型企业主和创业者                          │
+│  **Price Range:** 每月99-499元                                     │
+│  **Company Culture:** 注重客户成功和创新                            │
+│                                                                    │
+│  ## Market Overview                                               │
+│                                                                    │
+│  Industry Leaders: 10                                             │
+│  Total Competitors Identified: 30                                 │
+│  Market Characteristics: Competitive with multiple players       │
+│                                                                    │
+│  ## Competitive Analysis                                          │
+│                                                                    │
+│  Name-Based Competitors: 10                                       │
+│  Purpose-Based Competitors: 10                                    │
+│  Price-Based Competitors: 10                                      │
+│                                                                    │
+│  [More detailed analysis...]                                      │
+│                                                                    │
+└────────────────────────────────────────────────────────────────────┘
+
+────────────────────────────────────────────────────────────────────────
+
+💡 使用提示 / Usage Tips
+
+1. 必填字段 / Required Fields: 行业和产品名称是必填的
+2. 详细信息 / Detailed Info: 提供越详细的信息，分析结果越准确
+3. 处理时间 / Processing Time: 完整分析可能需要几分钟时间
+4. 报告内容 / Report Contents:
+   - 行业分析 / Industry Analysis
+   - 竞品对比 / Competitor Comparison
+   - 价格分析 / Price Analysis
+   - 战略建议 / Strategic Recommendations
+
+🏗️ 系统架构 / System Architecture
+
+本系统使用8个专业AI代理协同工作：
+- AgentA: 信息收集 / Information Collection
+- AgentB: 行业分析 / Industry Analysis
+- AgentC: 产品名称搜索 / Product Name Search
+- AgentD: 产品用途搜索 / Product Purpose Search
+- AgentE: 价格分析 / Price Analysis
+- AgentF: 整合分析 / Integration Analysis
+- AgentG: 报告生成 / Report Generation
+- AgentH: 报告评估 / Report Evaluation
+
+────────────────────────────────────────────────────────────────────────
+
+📋 示例 / Examples
+
+Example 1: 电子商务平台 | E-commerce Platform
+┌──────────────────────────────────────────────────────────────┐
+│ Industry: 电子商务平台                                          │
+│ Product Name: ShopEasy                                        │
+│ Product Purpose: 为中小企业提供在线商店解决方案的SaaS平台        │
+│ Target Audience: 中小型企业主和创业者                          │
+│ Price Range: 每月99-499元                                      │
+│ Company Culture: 注重客户成功和创新                             │
+│ User Needs: 了解市场竞争情况并找到差异化定位                    │
+└──────────────────────────────────────────────────────────────┘
+
+Example 2: Healthcare Technology
+┌──────────────────────────────────────────────────────────────┐
+│ Industry: Healthcare Technology                               │
+│ Product Name: HealthTrack Pro                                 │
+│ Product Purpose: Patient health monitoring system             │
+│ Target Audience: Healthcare providers                         │
+│ Price Range: $199-$999 per month                             │
+│ Company Culture: Innovation in healthcare                     │
+│ User Needs: Understand competitive landscape                 │
+└──────────────────────────────────────────────────────────────┘
+
+```
+
+## 颜色和主题 / Colors and Theme
+
+- **Primary Color:** Soft blue/purple gradient (Gradio Soft theme)
+- **Background:** Clean white with subtle shadows
+- **Text:** Dark gray for readability
+- **Buttons:** Blue for primary actions, gray for secondary
+- **Forms:** Light gray borders, rounded corners
+- **Success:** Green checkmarks and text
+- **Errors:** Red text and icons
+
+## 响应式设计 / Responsive Design
+
+The interface automatically adjusts to different screen sizes:
+- Desktop: Two-column layout (input | output)
+- Tablet: Stacked layout with full-width columns
+- Mobile: Single column, vertical scrolling
+
+## 交互元素 / Interactive Elements
+
+1. **Form Inputs:** Click to type
+2. **Buttons:** Hover effects, click to execute
+3. **Examples:** Click to auto-fill form
+4. **Clear Button:** Reset all fields
+5. **Progress:** Visual feedback during analysis
+
+## 可访问性 / Accessibility
+
+- ✅ Keyboard navigation supported
+- ✅ Screen reader compatible
+- ✅ High contrast mode available
+- ✅ Bilingual labels and instructions
+- ✅ Clear error messages
