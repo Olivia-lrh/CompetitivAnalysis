@@ -12,18 +12,31 @@ This project implements a comprehensive competitive analysis system based on the
 
 ### 💻 Interface / 界面
 
-**Current Version:** Command Line Interface (CLI) only
+**Available Interfaces / 可用界面:**
 
-**当前版本：** 仅命令行界面（CLI）
+1. **Gradio Web UI** ⭐ NEW / 新功能
+   - Modern web interface with forms and visualizations
+   - 现代化Web界面，带有表单和可视化
+   - Easy to use for non-technical users
+   - 适合非技术用户使用
+   - Run: `python gradio_app.py`
+   - 运行: `python gradio_app.py`
+
+2. **Command Line Interface (CLI)**
+   - Traditional terminal-based interface
+   - 传统的终端界面
+   - For developers and power users
+   - 适合开发者和高级用户
+   - Run: `python cli.py`
+   - 运行: `python cli.py`
 
 - **Language:** Python 3.12+
-- **Type:** CLI application (`cli.py`)
-- **No Web Frontend:** This is currently a backend-only project
-- **无Web前端：** 这是一个纯后端项目
+- **Backend:** Multi-agent system with 8 specialized agents
+- **后端:** 8个专业代理的多智能体系统
 
-> 📝 **Note:** For information about potential frontend implementation, see [docs/FRONTEND.md](docs/FRONTEND.md)
+> 📝 **Note:** For information about other frontend options, see [docs/FRONTEND.md](docs/FRONTEND.md)
 > 
-> 📝 **注意：** 有关潜在前端实现的信息，请参阅 [docs/FRONTEND.md](docs/FRONTEND.md)
+> 📝 **注意：** 有关其他前端选项的信息，请参阅 [docs/FRONTEND.md](docs/FRONTEND.md)
 
 ## 架构设计 / Architecture Design
 
@@ -157,14 +170,18 @@ CompetitivAnalysis/
 │   ├── DEVELOPMENT.md     # Development guide / 开发指南
 │   ├── SECURITY.md        # Security advisories / 安全公告
 │   ├── SUMMARY.md         # Project summary / 项目总结
-│   └── FRONTEND.md        # Frontend options / 前端选项 ⭐ NEW
+│   ├── FRONTEND.md        # Frontend options / 前端选项
+│   └── FRONTEND_CN.md     # Frontend guide (Chinese) / 前端指南（中文）
 ├── cli.py                 # CLI entry point / 命令行入口
+├── gradio_app.py          # Gradio web interface / Gradio Web界面 ⭐ NEW
 ├── pyproject.toml         # Project configuration / 项目配置
 ├── .env.example           # Environment variables template / 环境变量模板
 └── README.md             # This file / 本文件
 ```
 
-> ⚠️ **Important:** There is no `frontend/` directory because this project currently has no frontend.
+> ✅ **New:** Gradio web interface now available! / Gradio Web界面现已可用！
+> 
+> ⚠️ **Note:** No separate `frontend/` directory - Gradio is Python-based / 注意：没有独立的 `frontend/` 目录 - Gradio基于Python
 > 
 > ⚠️ **重要提示：** 没有 `frontend/` 目录，因为该项目目前没有前端。
 
@@ -204,14 +221,31 @@ cp .env.example .env
 
 ## 使用方法 / Usage
 
-### Command Line Interface / 命令行界面
+### 🌐 Gradio Web Interface / Web界面 (Recommended / 推荐)
+
+```bash
+# Start the Gradio web interface / 启动Gradio Web界面
+python gradio_app.py
+
+# Then open in browser / 然后在浏览器中打开
+# http://localhost:7860
+```
+
+**Features / 功能:**
+- ✅ User-friendly web form / 用户友好的Web表单
+- ✅ Real-time progress updates / 实时进度更新
+- ✅ Bilingual interface (Chinese/English) / 双语界面（中英文）
+- ✅ Example inputs included / 包含示例输入
+- ✅ No programming knowledge required / 无需编程知识
+
+### 💻 Command Line Interface / 命令行界面
 
 ```bash
 # Run the CLI tool / 运行命令行工具
 python cli.py
 ```
 
-### Programmatic Usage / 编程使用
+### 📝 Programmatic Usage / 编程使用
 
 ```python
 import asyncio
@@ -334,40 +368,47 @@ ruff check src/
 ### Q1: 这个项目的前端是使用什么语言和架构写的？
 ### Q1: What language and architecture is this project's frontend written in?
 
-**A:** This project **currently has NO frontend**. It is a CLI (Command Line Interface) application written entirely in Python 3.12+.
+**A:** This project now has a **Gradio-based web frontend** (NEW!) in addition to the CLI interface.
 
-**答：** 本项目**目前没有前端**。它是一个完全用 Python 3.12+ 编写的命令行界面（CLI）应用程序。
+**答：** 本项目现在有一个**基于Gradio的Web前端**（新功能！）以及CLI界面。
 
-- **Current Interface / 当前界面:** Command Line (CLI) only
-- **Language / 语言:** Python
-- **Entry Point / 入口点:** `cli.py`
-- **Output / 输出:** Text-based reports (Markdown)
+- **Web Interface / Web界面:** Gradio (Python-based) ⭐ NEW
+  - Entry Point / 入口点: `gradio_app.py`
+  - User-friendly web forms / 用户友好的Web表单
+  - No programming knowledge required / 无需编程知识
+  
+- **CLI Interface / 命令行界面:** Python
+  - Entry Point / 入口点: `cli.py`
+  - For developers and power users / 适合开发者和高级用户
+  - Output / 输出: Text-based reports (Markdown)
 
-**If you want to add a frontend**, please see the detailed guide in [docs/FRONTEND.md](docs/FRONTEND.md) which includes:
-- Recommended tech stacks (React, Vue, Next.js)
-- Implementation plans
-- Code examples
-- Architecture diagrams
+**To use the web interface / 使用Web界面:**
+```bash
+python gradio_app.py
+# Open http://localhost:7860 in your browser
+```
 
-**如果您想添加前端**，请参阅 [docs/FRONTEND.md](docs/FRONTEND.md) 中的详细指南，其中包括：
-- 推荐的技术栈（React、Vue、Next.js）
-- 实施计划
-- 代码示例
-- 架构图
+**For other frontend options**, see [docs/FRONTEND.md](docs/FRONTEND.md) for React, Vue, and Next.js implementation guides.
+
+**其他前端选项**，请参阅 [docs/FRONTEND.md](docs/FRONTEND.md) 了解React、Vue和Next.js实施指南。
 
 ---
 
 ### Q2: Can I use this project without programming knowledge?
 ### Q2: 我可以在不懂编程的情况下使用这个项目吗？
 
-**A:** Currently, **no**. The project requires:
-- Basic Python knowledge to run the CLI
-- Ability to configure `.env` files
-- Terminal/command line usage
+**A:** **YES!** With the new Gradio web interface, you can now use this project without programming knowledge!
 
-**答：** 目前**不行**。该项目需要：
-- 基本的Python知识来运行CLI
-- 配置 `.env` 文件的能力
+**答：** **可以！** 使用新的Gradio Web界面，您现在无需编程知识即可使用本项目！
+
+**With Gradio / 使用Gradio:**
+- ✅ No programming required / 无需编程
+- ✅ User-friendly web forms / 用户友好的Web表单
+- ✅ Just fill in the form and click "Start Analysis" / 只需填写表单并点击"开始分析"
+
+**With CLI / 使用CLI:**
+- ❌ Requires Python knowledge / 需要Python知识
+- ❌ Terminal/command line usage / 需要使用终端/命令行
 - 终端/命令行使用
 
 **Future:** A web frontend would make it accessible to non-technical users.

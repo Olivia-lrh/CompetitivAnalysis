@@ -29,6 +29,7 @@ dependencies = [
     "termcolor>=3.0.0",
     "rich>=14.0.0",
     "requests>=2.31.0",
+    "gradio>=4.0.0",
 ]
 
 [project.optional-dependencies]
