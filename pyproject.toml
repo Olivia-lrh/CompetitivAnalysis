@@ -1,0 +1,81 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "competitive-analysis"
+version = "0.1.0"
+authors = [
+  { name="Competitive Analysis Team", email="team@example.com" },
+]
+description = "AI-powered competitive analysis tool using multi-agent collaboration"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "langchain-community>=0.3.19",
+    "langchain-experimental>=0.3.4",
+    "langchain-openai>=0.3.8",
+    "langgraph>=0.3.5",
+    "python-dotenv>=1.0.1",
+    "pydantic>=2.0.0",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.27.1",
+    "pandas>=2.2.3",
+    "numpy>=2.2.3",
+    "aiofiles>=24.1.0",
+    "tabulate>=0.9.0",
+    "mcp==1.9.2",
+    "termcolor>=3.0.0",
+    "rich>=14.0.0",
+    "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.2.0",
+    "pytest>=7.4.0",
+    "ruff>=0.6.0",
+]
+test = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=src --cov-report=term-missing"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle
+    "F",  # Pyflakes
+    "UP", # pyupgrade
+    "B",  # flake8-bugbear
+    "SIM", # flake8-simplify
+    "G",  # flake8-logging-format
+]
+
+ignore = [
+    "F405", "F403",  # star imports
+    "E731",  # lambda expression assignment
+    "B007",  # Loop control variable not used
+    "UP032", # f-string format
+    "UP007", # Can remove once 3.10+ is the minimum Python version
+]
