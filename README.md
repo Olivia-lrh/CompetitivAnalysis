@@ -10,6 +10,21 @@ This project implements a comprehensive competitive analysis system based on the
 
 本项目基于 [cooragent](https://github.com/LeapLabTHU/cooragent) 架构实现了一个全面的竞品分析系统。它使用多个专业AI代理协同工作，收集、分析并生成详细的竞品分析报告。
 
+### 💻 Interface / 界面
+
+**Current Version:** Command Line Interface (CLI) only
+
+**当前版本：** 仅命令行界面（CLI）
+
+- **Language:** Python 3.12+
+- **Type:** CLI application (`cli.py`)
+- **No Web Frontend:** This is currently a backend-only project
+- **无Web前端：** 这是一个纯后端项目
+
+> 📝 **Note:** For information about potential frontend implementation, see [docs/FRONTEND.md](docs/FRONTEND.md)
+> 
+> 📝 **注意：** 有关潜在前端实现的信息，请参阅 [docs/FRONTEND.md](docs/FRONTEND.md)
+
 ## 架构设计 / Architecture Design
 
 ### Multi-Agent System / 多智能体系统
@@ -136,11 +151,22 @@ CompetitivAnalysis/
 │   │   └── report_generation.py
 │   └── workflow/          # Workflow orchestration / 工作流编排
 │       └── competitive_analysis_workflow.py
+├── docs/                  # Documentation / 文档
+│   ├── EXAMPLES.md        # Usage examples / 使用示例
+│   ├── ARCHITECTURE.md    # Architecture docs / 架构文档
+│   ├── DEVELOPMENT.md     # Development guide / 开发指南
+│   ├── SECURITY.md        # Security advisories / 安全公告
+│   ├── SUMMARY.md         # Project summary / 项目总结
+│   └── FRONTEND.md        # Frontend options / 前端选项 ⭐ NEW
 ├── cli.py                 # CLI entry point / 命令行入口
 ├── pyproject.toml         # Project configuration / 项目配置
 ├── .env.example           # Environment variables template / 环境变量模板
 └── README.md             # This file / 本文件
 ```
+
+> ⚠️ **Important:** There is no `frontend/` directory because this project currently has no frontend.
+> 
+> ⚠️ **重要提示：** 没有 `frontend/` 目录，因为该项目目前没有前端。
 
 ## 安装 / Installation
 
@@ -302,6 +328,107 @@ pytest tests/
 black src/
 ruff check src/
 ```
+
+## 常见问题 / FAQ
+
+### Q1: 这个项目的前端是使用什么语言和架构写的？
+### Q1: What language and architecture is this project's frontend written in?
+
+**A:** This project **currently has NO frontend**. It is a CLI (Command Line Interface) application written entirely in Python 3.12+.
+
+**答：** 本项目**目前没有前端**。它是一个完全用 Python 3.12+ 编写的命令行界面（CLI）应用程序。
+
+- **Current Interface / 当前界面:** Command Line (CLI) only
+- **Language / 语言:** Python
+- **Entry Point / 入口点:** `cli.py`
+- **Output / 输出:** Text-based reports (Markdown)
+
+**If you want to add a frontend**, please see the detailed guide in [docs/FRONTEND.md](docs/FRONTEND.md) which includes:
+- Recommended tech stacks (React, Vue, Next.js)
+- Implementation plans
+- Code examples
+- Architecture diagrams
+
+**如果您想添加前端**，请参阅 [docs/FRONTEND.md](docs/FRONTEND.md) 中的详细指南，其中包括：
+- 推荐的技术栈（React、Vue、Next.js）
+- 实施计划
+- 代码示例
+- 架构图
+
+---
+
+### Q2: Can I use this project without programming knowledge?
+### Q2: 我可以在不懂编程的情况下使用这个项目吗？
+
+**A:** Currently, **no**. The project requires:
+- Basic Python knowledge to run the CLI
+- Ability to configure `.env` files
+- Terminal/command line usage
+
+**答：** 目前**不行**。该项目需要：
+- 基本的Python知识来运行CLI
+- 配置 `.env` 文件的能力
+- 终端/命令行使用
+
+**Future:** A web frontend would make it accessible to non-technical users.
+
+**未来：** Web前端将使非技术用户也能使用。
+
+---
+
+### Q3: How do I get a graphical interface?
+### Q3: 如何获得图形界面？
+
+**A:** You have three options:
+
+**答：** 您有三个选择：
+
+1. **Wait for future development** - A web frontend may be added later
+   **等待未来开发** - 可能稍后添加Web前端
+
+2. **Build your own frontend** - Follow the guide in [docs/FRONTEND.md](docs/FRONTEND.md)
+   **构建自己的前端** - 遵循 [docs/FRONTEND.md](docs/FRONTEND.md) 中的指南
+
+3. **Use programmatically** - Integrate the Python API into your own application
+   **以编程方式使用** - 将Python API集成到您自己的应用程序中
+
+---
+
+### Q4: What interface types are supported?
+### Q4: 支持哪些接口类型？
+
+**A:** Currently supported / 当前支持：
+- ✅ **CLI (Command Line Interface)** - `python cli.py`
+- ✅ **Python API** - Import and use programmatically
+
+Not yet available / 尚不可用：
+- ❌ Web UI (Browser-based interface)
+- ❌ Desktop App (Electron/Tauri)
+- ❌ Mobile App (iOS/Android)
+- ❌ REST API (FastAPI server)
+
+See [docs/FRONTEND.md](docs/FRONTEND.md) for implementation guides.
+
+---
+
+### Q5: Is this project only for developers?
+### Q5: 这个项目仅适用于开发人员吗？
+
+**A:** Currently, **yes**. The CLI interface requires:
+- Python installation and environment setup
+- Command line proficiency
+- API key configuration
+
+**答：** 目前**是的**。CLI界面需要：
+- Python安装和环境设置
+- 命令行熟练度
+- API密钥配置
+
+However, the architecture is designed to be easily extended with a user-friendly frontend in the future.
+
+然而，该架构设计为在未来可以轻松扩展为用户友好的前端。
+
+---
 
 ## 贡献 / Contributing
 
